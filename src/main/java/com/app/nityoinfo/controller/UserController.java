@@ -25,13 +25,9 @@ public class UserController {
 	public String saveUser(@RequestBody UserEntity user) {
 		return ser.saveUser(user);
 	}
-	@GetMapping("/user/{userId}")
-	public UserEntity getUserId(@PathVariable Integer userId) {
-		return ser.getUserId(userId);
-	}
 	
 	@PostMapping("/signin")
-	public String getLoginPage(UserLoginPage loginpage) {
+	public String getLoginPage(@RequestBody UserLoginPage loginpage) {
 		return ser.getLoginPage(loginpage);
 	}
 
